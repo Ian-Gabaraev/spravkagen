@@ -47,9 +47,9 @@ GB_months_by_number = {
 email_tweaks = {
     "intro": "Hello from Kuver Tech!",
     "subject": "SpravkaGen. Ваша ежедневная справка.",
-    "master_email": "spravkagen@kuver.tech",
-    "password": "atizurifki",
-    "SMTP": "mail.kuver.tech",
+    "master_email": "example@example.com",
+    "password": "password",
+    "SMTP": "mail.example.com",
     "port": 25,
 }
 
