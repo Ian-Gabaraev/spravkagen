@@ -13,3 +13,5 @@ Spravkagen собирает информацию из трех интернет-
 * Измените значение поля today на False и значение поля delta, чтобы получать справки за определенный день.
 
 Готово!
+
+Spravkagen использует SputnikNews http://sputniknews.com
