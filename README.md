@@ -14,4 +14,4 @@ Spravkagen собирает информацию из трех интернет-
 
 Готово!
 
-Spravkagen использует SputnikNews http://sputniknews.com
+Spravkagen использует SputnikNews http://sputnik-ossetia.ru/spravka/
