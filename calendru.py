@@ -76,21 +76,20 @@ class CalendRu:
 
     def generate_text_for_folk_holidays(self, html=False):
         self.load_folk_holidays()
-        self.generate_text_for_main_holidays(dataset=self.folk_holidays, dictionary=self.folk_holidays_text, html=html)
-        # for link in self.folk_holidays:
-        #     response = requests.get(link)
-        #     source = response.text
-        #     soup = BeautifulSoup(source, features="html.parser")
-        #     title = soup.find('h1', itemprop='name headline')
-        #     self.all_holidays_titles.add(title)
-        #     main_text = soup.find_all('div', class_='maintext')
-        #     result = ""
-        #     for paragraph in main_text:
-        #         paragraph = re.sub(r'(?:\(.*}\);)|(?:\(Фото:\s.*\))', '', paragraph.text)
-        #         result += paragraph
-        #     self.folk_holidays_text[title] = result
-        # if html:
-        #     return self.dict_to_html(self.folk_holidays_text)
+        for link in self.folk_holidays:
+            response = requests.get(link)
+            source = response.text
+            soup = BeautifulSoup(source, features="html.parser")
+            title = soup.find('h1', itemprop='name headline')
+            self.all_holidays_titles.add(title)
+            main_text = soup.find_all('div', class_='maintext')
+            result = ""
+            for paragraph in main_text:
+                paragraph = re.sub(r'(?:\(.*}\);)|(?:\(Фото:\s.*\))', '', paragraph.text)
+                result += paragraph
+            self.folk_holidays_text[title] = result
+        if html:
+            return self.dict_to_html(self.folk_holidays_text)
 
     @staticmethod
     def dict_to_html(dictionary):
