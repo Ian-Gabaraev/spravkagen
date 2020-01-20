@@ -6,17 +6,8 @@ search_settings = {
     'brief results': True,
 }
 
-# subscribers = {
-#     "Creator": "y.gabaraev@spuntiknews.com",
-#     "Andrei Tadtaev": None,
-#     "Alexandra Alborova": None,
-#     "Karina Gagloeva": None,
-#     "Lana Chibirova": None,
-# }
-
-
 subscribers = [
-    'iangabaratti@icloud.com'
+    
 ]
 
 
